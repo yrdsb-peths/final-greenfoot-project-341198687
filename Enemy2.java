@@ -31,6 +31,10 @@ public class Enemy2 extends Enemy
             Counter counter = myWorld.getCounter();
             counter.addScore();
             timesHit--;
+            if (timesHit <= 0) 
+            {
+                 getWorld().removeObject(this);
+            }
         }
         else if (getY()==599)
         {

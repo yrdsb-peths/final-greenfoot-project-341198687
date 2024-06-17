@@ -8,22 +8,30 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Counter extends Actor
 {
-    //this is the starting score 
     int score = 0;
-    /**
-     * Act - do whatever the Counter wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    int targetScore = 15;  // Set the target score to 15
+
     public Counter()
     {
-        setImage (new GreenfootImage("Score: " + score, 50, Color.RED, Color.BLACK));
+        setImage(new GreenfootImage("Score: " + score, 50, Color.RED, Color.BLACK));
     }
+
     public void act()
     {
-        setImage (new GreenfootImage("Score: " + score , 50, Color.RED, Color.BLACK));
+        setImage(new GreenfootImage("Score: " + score, 50, Color.RED, Color.BLACK));
+        checkGameOver();
     }
+
     public void addScore()
     {
         score++;
+    }
+
+    public void checkGameOver()
+    {
+        if (score >= targetScore) {
+            MyWorld world = (MyWorld) getWorld();
+            world.gameOver();
+        }
     }
 }
