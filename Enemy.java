@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Enemy here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Kushager Bakshi
+ * June 17 2024
  */
 public class Enemy extends Actor
 {
@@ -15,6 +15,7 @@ public class Enemy extends Actor
     public void act()
     {
         moveEnemy();
+        removeEnemy();
     }
 
     public void moveEnemy()
@@ -27,5 +28,9 @@ public class Enemy extends Actor
         {
             getWorld().removeObject(this);
         }
+    }
+    public void removeEnemy()
+    {
+       
     }
 }
