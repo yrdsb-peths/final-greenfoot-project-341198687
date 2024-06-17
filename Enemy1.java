@@ -9,16 +9,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Enemy1 extends Enemy
 {
     /**
-     * Act - do whatever the Enemy1 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Constructor for objects of class Enemy1.
      */
     public Enemy1()
     {
-       setRotation(90);  
+        setRotation(90);  // Make sure the enemy is facing downwards
     }
-    
+
+    /**
+     * Act - do whatever the Enemy1 wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act()
     {
-        // Add your action code here.
+        moveEnemy();
     }
 }

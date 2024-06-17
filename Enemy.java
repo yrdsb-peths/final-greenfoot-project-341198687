@@ -14,10 +14,18 @@ public class Enemy extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        moveEnemy();
     }
+
     public void moveEnemy()
     {
-       moveEnemy(); 
+        // Example movement code: move down the screen
+        setLocation(getX(), getY() + 1);
+
+        // Remove the enemy if it reaches the bottom of the screen
+        if (getY() >= getWorld().getHeight())
+        {
+            getWorld().removeObject(this);
+        }
     }
 }

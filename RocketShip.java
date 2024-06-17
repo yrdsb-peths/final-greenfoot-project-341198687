@@ -14,7 +14,7 @@ public class RocketShip extends Actor
      */
     public RocketShip()
     {
-        setRotation(280);
+        setRotation(270);
     }
     public void act()
     {
